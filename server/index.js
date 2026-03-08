@@ -31,7 +31,7 @@ if (!fs.existsSync(uploadsDir)) {
 
 // Middleware
 app.use(cors({
-  origin: "*",
+  origin: process.env.CLIENT_URL,
   methods: ["GET","POST","PUT","DELETE","PATCH"],
   credentials: true
 }));
